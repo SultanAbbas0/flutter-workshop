@@ -39,34 +39,10 @@ class GpaPlannerApp extends StatelessWidget {
                   ),
                 ),
               ),
-              Card(
-                child: ListTile(
-                  leading: CircleAvatar(child: Text('3 h')),
-                  title: Text('Data Structures'),
-                  subtitle: Text('Expected mark 88%'),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: CircleAvatar(child: Text('4 h')),
-                  title: Text('Calculus II'),
-                  subtitle: Text('Expected mark 76%'),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: CircleAvatar(child: Text('3 h')),
-                  title: Text('Database Systems'),
-                  subtitle: Text('Expected mark 91%'),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: CircleAvatar(child: Text('2 h')),
-                  title: Text('Technical Writing'),
-                  subtitle: Text('Expected mark 85%'),
-                ),
-              ),
+              CourseTile(name: 'Data Structures', hours: 3, mark: 88),
+              CourseTile(name: 'Calculus II', hours: 4, mark: 76),
+              CourseTile(name: 'Database Systems', hours: 3, mark: 91),
+              CourseTile(name: 'Technical Writing', hours: 2, mark: 85),
             ],
           ),
         ),
@@ -76,6 +52,30 @@ class GpaPlannerApp extends StatelessWidget {
           },
           child: Icon(Icons.add),
         ),
+      ),
+    );
+  }
+}
+
+class CourseTile extends StatelessWidget {
+  const CourseTile({
+    super.key,
+    required this.name,
+    required this.hours,
+    required this.mark,
+  });
+
+  final String name;
+  final int hours;
+  final int mark;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: CircleAvatar(child: Text('$hours h')),
+        title: Text(name),
+        subtitle: Text('Expected mark $mark%'),
       ),
     );
   }
