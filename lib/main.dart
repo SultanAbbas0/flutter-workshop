@@ -13,6 +13,12 @@ class GpaPlannerApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: Text('My Courses')),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            debugPrint('Add course');
+          },
+          child: Icon(Icons.add),
+        ),
       ),
     );
   }
