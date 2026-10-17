@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gpa_planner/widgets/course_tile.dart';
 
 void main() {
   runApp(GpaPlannerApp());
@@ -61,30 +62,6 @@ class SummaryCard extends StatelessWidget {
             Text('Semester average 84.25% · 12 included hours'),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class CourseTile extends StatelessWidget {
-  const CourseTile({
-    super.key,
-    required this.name,
-    required this.hours,
-    required this.mark,
-  });
-
-  final String name;
-  final int hours;
-  final int mark;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
-        leading: CircleAvatar(child: Text('$hours h')),
-        title: Text(name),
-        subtitle: Text('Expected mark $mark%'),
       ),
     );
   }
