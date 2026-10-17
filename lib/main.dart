@@ -16,6 +16,32 @@ class GpaPlannerApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(title: Text('My Courses')),
+        body: Padding(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Card(
+                child: Padding(
+                  padding: EdgeInsets.all(24),
+                  child: Column(
+                    children: [
+                      Text('Projected GPA'),
+                      Text(
+                        '82.47%',
+                        style: TextStyle(
+                          fontSize: 36,
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                      ),
+                      Text('Semester average 84.25% · 12 included hours'),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             debugPrint('Add course');
