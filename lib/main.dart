@@ -11,6 +11,9 @@ class GpaPlannerApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+      ),
       home: Scaffold(
         appBar: AppBar(title: Text('My Courses')),
         floatingActionButton: FloatingActionButton(
