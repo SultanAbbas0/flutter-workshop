@@ -39,6 +39,13 @@ class GpaPlannerApp extends StatelessWidget {
                   ),
                 ),
               ),
+              Card(
+                child: ListTile(
+                  leading: CircleAvatar(child: Text('3 h')),
+                  title: Text('Data Structures'),
+                  subtitle: Text('Expected mark 88%'),
+                ),
+              ),
             ],
           ),
         ),
