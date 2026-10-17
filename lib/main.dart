@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gpa_planner/widgets/course_tile.dart';
+import 'package:gpa_planner/widgets/summary_card.dart';
 
 void main() {
   runApp(GpaPlannerApp());
@@ -35,32 +36,6 @@ class GpaPlannerApp extends StatelessWidget {
             debugPrint('Add course');
           },
           child: Icon(Icons.add),
-        ),
-      ),
-    );
-  }
-}
-
-class SummaryCard extends StatelessWidget {
-  const SummaryCard({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Padding(
-        padding: EdgeInsets.all(24),
-        child: Column(
-          children: [
-            Text('Projected GPA'),
-            Text(
-              '82.47%',
-              style: TextStyle(
-                fontSize: 36,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            ),
-            Text('Semester average 84.25% · 12 included hours'),
-          ],
         ),
       ),
     );
