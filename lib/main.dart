@@ -46,6 +46,27 @@ class GpaPlannerApp extends StatelessWidget {
                   subtitle: Text('Expected mark 88%'),
                 ),
               ),
+              Card(
+                child: ListTile(
+                  leading: CircleAvatar(child: Text('4 h')),
+                  title: Text('Calculus II'),
+                  subtitle: Text('Expected mark 76%'),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  leading: CircleAvatar(child: Text('3 h')),
+                  title: Text('Database Systems'),
+                  subtitle: Text('Expected mark 91%'),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  leading: CircleAvatar(child: Text('2 h')),
+                  title: Text('Technical Writing'),
+                  subtitle: Text('Expected mark 85%'),
+                ),
+              ),
             ],
           ),
         ),
