@@ -21,24 +21,7 @@ class GpaPlannerApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Card(
-                child: Padding(
-                  padding: EdgeInsets.all(24),
-                  child: Column(
-                    children: [
-                      Text('Projected GPA'),
-                      Text(
-                        '82.47%',
-                        style: TextStyle(
-                          fontSize: 36,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
-                      ),
-                      Text('Semester average 84.25% · 12 included hours'),
-                    ],
-                  ),
-                ),
-              ),
+              SummaryCard(),
               CourseTile(name: 'Data Structures', hours: 3, mark: 88),
               CourseTile(name: 'Calculus II', hours: 4, mark: 76),
               CourseTile(name: 'Database Systems', hours: 3, mark: 91),
@@ -51,6 +34,32 @@ class GpaPlannerApp extends StatelessWidget {
             debugPrint('Add course');
           },
           child: Icon(Icons.add),
+        ),
+      ),
+    );
+  }
+}
+
+class SummaryCard extends StatelessWidget {
+  const SummaryCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: EdgeInsets.all(24),
+        child: Column(
+          children: [
+            Text('Projected GPA'),
+            Text(
+              '82.47%',
+              style: TextStyle(
+                fontSize: 36,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            ),
+            Text('Semester average 84.25% · 12 included hours'),
+          ],
         ),
       ),
     );
